@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/09/2015 04:37:10 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Fase" table="fase" catalog="prueba" optimistic-lock="version">
+        <id name="idFase" type="int">
+            <column name="idFase" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreFase" type="string">
+            <column name="nombre_fase" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/09/2015 04:37:10 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.TareaAlumno" table="`tarea-alumno`" catalog="prueba" optimistic-lock="version">
+        <composite-id name="id" class="Modelo.TareaAlumnoId">
+            <key-property name="numeroTarea" type="int">
+                <column name="numeroTarea" />
+            </key-property>
+            <key-property name="alumnoHasGrupoAlumnoMatricula" type="int">
+                <column name="Alumno_has_Grupo_Alumno_Matricula" />
+            </key-property>
+        </composite-id>
+        <property name="basePlaneadas" type="java.lang.Integer">
+            <column name="base_planeadas" />
+        </property>
+        <property name="baseReales" type="java.lang.Integer">
+            <column name="base_reales" />
+        </property>
+        <property name="reutilizadoPlaneado" type="java.lang.Integer">
+            <column name="reutilizado_planeado" />
+        </property>
+        <property name="reutilizadoReal" type="java.lang.Integer">
+            <column name="reutilizado_real" />
+        </property>
+        <property name="eliminadoPlaneado" type="java.lang.Integer">
+            <column name="eliminado_planeado" />
+        </property>
+        <property name="eliminadoReal" type="java.lang.Integer">
+            <column name="eliminado_real" />
+        </property>
+        <property name="modificadoPlaneado" type="java.lang.Integer">
+            <column name="modificado_planeado" />
+        </property>
+        <property name="modificadoReal" type="java.lang.Integer">
+            <column name="modificado_real" />
+        </property>
+        <property name="agregadasModificadasPlaneadas" type="java.lang.Integer">
+            <column name="agregadas_modificadas_planeadas" />
+        </property>
+        <property name="totalPlaneado" type="java.lang.Integer">
+            <column name="total_planeado" />
+        </property>
+        <property name="totalReal" type="java.lang.Integer">
+            <column name="total_real" />
+        </property>
+        <property name="nuevoReutilizadoPlaneado" type="java.lang.Integer">
+            <column name="nuevo_reutilizado_planeado" />
+        </property>
+        <property name="metodoEstimacionTamano" type="string">
+            <column name="metodo_estimacion_tamano" length="10" />
+        </property>
+        <property name="metodoEstimacionTiempo" type="string">
+            <column name="metodo_estimacion_tiempo" length="10" />
+        </property>
+        <property name="lpitamano" type="java.lang.Double">
+            <column name="LPITamano" precision="22" scale="0" />
+        </property>
+        <property name="lpitiempo" type="java.lang.Double">
+            <column name="LPITiempo" precision="22" scale="0" />
+        </property>
+        <property name="upitamano" type="java.lang.Double">
+            <column name="UPITamano" precision="22" scale="0" />
+        </property>
+        <property name="upitiempo" type="java.lang.Double">
+            <column name="UPITiempo" precision="22" scale="0" />
+        </property>
+        <property name="alumnoHasGrupoGrupoGrupo" type="string">
+            <column name="Alumno_has_Grupo_Grupo_grupo" length="10" not-null="true" />
+        </property>
+        <property name="alumnoHasGrupoGrupoTrimestreLectivo" type="string">
+            <column name="Alumno_has_Grupo_Grupo_trimestreLectivo" length="3" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

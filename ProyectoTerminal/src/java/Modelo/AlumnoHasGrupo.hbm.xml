@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/09/2015 04:37:10 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.AlumnoHasGrupo" table="alumno_has_grupo" catalog="prueba" optimistic-lock="version">
+        <composite-id name="id" class="Modelo.AlumnoHasGrupoId">
+            <key-property name="alumnoMatricula" type="int">
+                <column name="Alumno_Matricula" />
+            </key-property>
+            <key-property name="grupoGrupo" type="string">
+                <column name="Grupo_grupo" length="10" />
+            </key-property>
+            <key-property name="grupoTrimestreLectivo" type="string">
+                <column name="Grupo_trimestreLectivo" length="3" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/09/2015 04:37:10 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Grupo" table="grupo" catalog="prueba" optimistic-lock="version">
+        <composite-id name="id" class="Modelo.GrupoId">
+            <key-property name="grupo" type="string">
+                <column name="grupo" length="10" />
+            </key-property>
+            <key-property name="trimestreLectivo" type="string">
+                <column name="trimestreLectivo" length="3" />
+            </key-property>
+        </composite-id>
+        <property name="numeroEmpleado" type="java.lang.Integer">
+            <column name="numeroEmpleado" />
+        </property>
+        <property name="cupo" type="java.lang.Integer">
+            <column name="cupo" />
+        </property>
+        <property name="numeroInscritos" type="java.lang.Integer">
+            <column name="numeroInscritos" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/09/2015 04:37:10 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.FaseAlumnoTarea" table="`fase-alumno-tarea`" catalog="prueba" optimistic-lock="version">
+        <composite-id name="id" class="Modelo.FaseAlumnoTareaId">
+            <key-property name="idFase" type="int">
+                <column name="idFase" />
+            </key-property>
+            <key-property name="idTarea" type="int">
+                <column name="idTarea" />
+            </key-property>
+            <key-property name="alumnoHasGrupoAlumnoMatricula" type="int">
+                <column name="Alumno_has_Grupo_Alumno_Matricula" />
+            </key-property>
+        </composite-id>
+        <property name="tiempoPlaneado" type="time">
+            <column name="tiempo_planeado" length="8" />
+        </property>
+        <property name="tiempoReal" type="time">
+            <column name="tiempo_real" length="8" />
+        </property>
+        <property name="defectosPlaneados" type="java.lang.Integer">
+            <column name="defectos_planeados" />
+        </property>
+        <property name="defectosReal" type="java.lang.Integer">
+            <column name="defectos_real" />
+        </property>
+        <property name="defectosEliminadosPlaneados" type="java.lang.Integer">
+            <column name="defectos_eliminados_planeados" />
+        </property>
+        <property name="defectosEliminadosReal" type="java.lang.Integer">
+            <column name="defectos_eliminados_real" />
+        </property>
+        <property name="alumnoHasGrupoGrupoGrupo" type="string">
+            <column name="Alumno_has_Grupo_Grupo_grupo" length="10" not-null="true" />
+        </property>
+        <property name="alumnoHasGrupoGrupoTrimestreLectivo" type="string">
+            <column name="Alumno_has_Grupo_Grupo_trimestreLectivo" length="3" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
