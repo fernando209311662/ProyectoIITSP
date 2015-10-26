@@ -1,5 +1,6 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
@@ -71,7 +72,7 @@
   	 <section class="contenedorLogin">
             
             <h:form class="formulario">
-                <h1>Ingresar como administrador</h1>
+                <h1>Ingresar como alumno</h1>
             
             <h:panelGrid columns="2">			
 		
@@ -80,13 +81,13 @@
                     <h:messages errorStyle="color:red;list-style:none;"/>
                     <section class="botones">
                         <br/>
-                        <h:commandButton value="Ingresar" action="#{beanIniciaSesion.loginAdmin()}"/>
+                        <h:commandButton value="Ingresar" action="#{beanIniciaSesion.loginAlumno()}" />
                     </section>
 	    </h:panelGrid>
                 
             </h:form>
              <br/>
-             <a href="loginAlumno.xhtml">Ingresar como alumno</a>
+             <a href="index.xhtml">Ingresar como administrador</a>
         </section>
         </center>
   <!-- end .content --></article>
